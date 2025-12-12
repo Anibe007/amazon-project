@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Top header -->
+  <header>
+    <div class="topbar">
+      <div class="logo">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='34'><rect width='120' height='34' fill='%23ffd814'/><text x='10' y='22' font-family='Arial' font-size='16' fill='%23000'>SHOP</text></svg>" alt="logo">
+        <div class="location">
+          <div style="font-weight:700">Deliver to Nigeria</div>
+          <div style="font-size:12px;opacity:.85">Lagos 100001</div>
+        </div>
+      </div>
+
+      <div style="flex:1"></div>
+
+      <div class="account">
+        <small><a class="login" href="./signup.html">Hello, Sign in</a></small>
+        <div style="font-weight:700"><a class="login" href="./login.html">Account & Lists</a></div>
+      </div>
+
+      <div class="cart flex" style="margin-left:12px">
+        <div class="count"><a href="./cart.html">0</a></div>
+        <div>
+          <div style="font-weight:700"><a href="./cart.html">Cart</a></div>
+          <div style="font-size:12px;opacity:.9"><a href="./cart.html">0 items</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search area -->
+    <div class="search-row">
+      <div class="search-container">
+        <div class="category">All</div>
+        <div class="search-input" style="background:#fff; border-radius:4px; overflow:hidden; display:flex; align-items:center; border:1px solid #ccc">
+          <input type="search" placeholder="Search Amazon-style site" aria-label="search">
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+
+      <div class="muted">Today's Deals</div>
+      <div class="muted">Help</div>
+    </div>
+
+    <nav class="nav">
+      <a href="#">All</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Customer Service</a>
+      <a href="#">Prime</a>
+      <a href="#">New Releases</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main style="padding:18px">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="banner">
+          <h2 style="margin-bottom:8px">Welcome back — great deals, everyday!</h2>
+          <p style="opacity:.95">Save up to 40% on selected categories. Free delivery over ₦15,000.</p>
+        </div>
+
+        <!-- Product grid -->
+        <div id="product-grid" class="grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="./images/travelling.png" alt="product">
+            <div style="font-size:14px">Travelling Bag</div>
+            <div class="rating">★★★★☆ (1,234)</div>
+            <div class="price">₦ 12,499</div>
+            <div class="cta"><button class="addbtn">Add to cart</button></div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="./images/T-shirt.png" alt="product">
+            <div style="font-size:14px">T-shirt</div>
+            <div class="rating">★★★★☆ (980)</div>
+            <div class="price">₦ 8,200</div>
+            <div class="cta"><button class="addbtn">Add to cart</button></div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="./images/shoes.png" alt="product">
+            <div style="font-size:14px">Shoes</div>
+            <div class="rating">★★★★★ (2,341)</div>
+            <div class="price">₦ 22,100</div>
+            <div class="cta"><button class="addbtn">Add to cart</button></div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="./images/office-chair.png" alt="product">
+            <div style="font-size:14px">Fourth Product — New arrival</div>
+            <div class="rating">★★★☆☆ (120)</div>
+            <div class="price">₦ 4,499</div>
+            <div class="cta"><button class="addbtn">Add to cart</button></div>
+          </div>
+
+        </div>
+      </div>
+
+        <!-- Dynamic product grid -->
+        <div id="product-grid" class="grid"></div>
+
+      </div>
+
+      <aside class="hero-right">
+        <div style="background:#fff; border-radius:8px; padding:12px; box-shadow:0 1px 5px rgba(0,0,0,.06)">
+          <h4 style="margin-bottom:8px">Limited time offer</h4>
+          <img src="./images/umbrella.jpg" alt="deal" style="width:100%; border-radius:6px">
+          <p style="margin-top:8px" class="muted">Save on bundled products and enjoy fast delivery.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="footer">
+      <div style="display:flex; flex-wrap:wrap; gap:18px">
+        <div style="flex:1; min-width:180px">
+          <h4>Get to know us</h4>
+          <p class="muted">About Us · Careers · Press Releases</p>
+        </div>
+        <div style="flex:1; min-width:180px">
+          <h4>Make Money with Us</h4>
+          <p class="muted">Sell on Shop · Affiliate Program</p>
+        </div>
+        <div style="flex:1; min-width:180px">
+          <h4>Help</h4>
+          <p class="muted">Returns · Shipping · Contact Us</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Link JS -->
+  <script src="product.js"></script>
+
+</body>
+</html>
