@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amazon Style Cart</title>
+
   <style>
     * {
       margin: 0;
@@ -22,10 +23,6 @@
       gap: 20px;
       max-width: 1100px;
       margin: 0 auto;
-    }
-
-    a .cart{
-      text-decoration: none;
     }
 
     /* Left: Cart Items */
@@ -78,6 +75,19 @@
       width: 70px;
       border-radius: 4px;
       border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #007185;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .remove-btn:hover {
+      text-decoration: underline;
     }
 
     .item-price {
@@ -118,7 +128,7 @@
       background: #f7ca00;
     }
 
-    /* Responsive for Mobile */
+    /* Mobile */
     @media(max-width: 800px) {
       .cart-layout {
         flex-direction: column;
@@ -130,6 +140,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <div class="cart-layout">
@@ -138,57 +149,32 @@
   <div class="cart-container">
     <div class="cart-title">Shopping Cart</div>
 
-    <div class="cart-item">
-      <img src="./images/headphones.png" alt="Product">
-
-      <div class="item-details">
-        <div class="item-title">Wireless Bluetooth Headphones</div>
-        <div class="item-seller">Sold by: TechMall Ltd.</div>
-
-        <label>Qty: </label>
-        <select class="qty-select" onchange="updateSubtotal()">
-          <option value="1" selected>1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-        </select>
-      </div>
-
-      <div class="item-price" data-price="25000">₦25,500</div>
-    </div>
+    <!-- ✅ DYNAMIC CART ITEMS GO HERE -->
+    <div id="cart-items"></div>
 
     <div class="subtotal-section" style="text-align:right; margin-top:15px; font-size:18px; font-weight:bold;">
-      Subtotal ( <span id="item-count">1</span> item ): 
-      <span style="color:#b12704;">₦<span id="subtotal">25,500</span></span>
+      Subtotal ( <span id="item-count">0</span> item ):
+      <span style="color:#b12704;">₦<span id="subtotal">0</span></span>
     </div>
   </div>
 
   <!-- RIGHT SIDE: CHECKOUT SECTION -->
   <div class="checkout-box">
     <div class="checkout-subtotal">
-      Subtotal ( <span id="item-count-2">1</span> item ): ₦<span id="subtotal-2">25,500</span>
+      Subtotal ( <span id="item-count-2">0</span> item ): ₦<span id="subtotal-2">0</span>
     </div>
 
-    <button class="checkout-btn">Proceed to Checkout</button>
+    <a class="checkout-btn" onclick="window.location.href='./checkout.html'">
+      Proceed to Checkout
+    </a>
   </div>
 
 </div>
 
-<script>
-  function updateSubtotal() {
-    const qty = document.querySelector('.qty-select').value;
-    const price = document.querySelector('.item-price').getAttribute('data-price');
-
-    const subtotal = qty * price;
-
-    document.getElementById('subtotal').textContent = subtotal.toLocaleString();
-    document.getElementById('subtotal-2').textContent = subtotal.toLocaleString();
-    document.getElementById('item-count').textContent = qty;
-    document.getElementById('item-count-2').textContent = qty;
-  }
+<!-- ✅ CART LOGIC -->
+<script src="cart.js">
+  localStorage.removeItem("cart");
+location.reload();
 </script>
 
 </body>
