@@ -28,7 +28,7 @@
       </div>
 
       <div class="cart flex" style="margin-left:12px">
-        <div class="count"><a href="./cart.html">0</a></div>
+        <div class="count"><a href="./cart.html" id="cart-count">0</a></div>
         <div>
           <div style="font-weight:700"><a href="./cart.html">Cart</a></div>
           <div style="font-size:12px;opacity:.9"><a href="./cart.html">0 items</a></div>
@@ -76,7 +76,7 @@
             <div style="font-size:14px">Travelling Bag</div>
             <div class="rating">★★★★☆ (1,234)</div>
             <div class="price">₦ 12,499</div>
-            <div class="cta"><button class="addbtn">Add to cart</button></div>
+            <div class="cta"><button class="addbtn js-add-to-cart" data-id="1">Add to cart</button></div>
           </div>
 
           <!-- Card 2 -->
@@ -85,7 +85,7 @@
             <div style="font-size:14px">T-shirt</div>
             <div class="rating">★★★★☆ (980)</div>
             <div class="price">₦ 8,200</div>
-            <div class="cta"><button class="addbtn">Add to cart</button></div>
+            <div class="cta"><button class="addbtn js-add-to-cart" data-id="2">Add to cart</button></div>
           </div>
 
           <!-- Card 3 -->
@@ -94,7 +94,7 @@
             <div style="font-size:14px">Shoes</div>
             <div class="rating">★★★★★ (2,341)</div>
             <div class="price">₦ 22,100</div>
-            <div class="cta"><button class="addbtn">Add to cart</button></div>
+            <div class="cta"><button class="addbtn js-add-to-cart" data-id="3">Add to cart</button></div>
           </div>
 
           <!-- Card 4 -->
@@ -103,7 +103,7 @@
             <div style="font-size:14px">Fourth Product — New arrival</div>
             <div class="rating">★★★☆☆ (120)</div>
             <div class="price">₦ 4,499</div>
-            <div class="cta"><button class="addbtn">Add to cart</button></div>
+            <div class="cta"><button class="addbtn js-add-to-cart" data-id="4">Add to cart</button></div>
           </div>
 
         </div>
@@ -143,6 +143,8 @@
 
   <!-- Link JS -->
   <script src="product.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
