@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Shop</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<header>
+  <div class="header-bar">
+    <h1>Shop Checkout</h1>
+    <a href="index.html" class="back-link">← Continue Shopping</a>
+  </div>
+</header>
+
+<main class="checkout-container">
+  <section class="checkout-items" id="checkout-items">
+    <!-- Items will be rendered here -->
+  </section>
+
+  <aside class="checkout-summary">
+    <h2>Order Summary</h2>
+    <p>Items: <span id="item-count">0</span></p>
+    <p>Total: ₦<span id="subtotal">0</span></p>
+    <button id="confirm-order">Confirm Order</button>
+  </aside>
+</main>
+
+<script src="checkout.js"></script>
+</body>
+</html>
